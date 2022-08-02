@@ -20,6 +20,10 @@ public class Main {
         double average = (double) sum / monthArray.length;
         System.out.printf("Средняя сумма трат за месяц составила %s рублей\n", average);
 
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
+        }
     }
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
