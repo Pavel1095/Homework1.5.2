@@ -1,9 +1,24 @@
 public class Main {
+    // Задание 1.
     public static void main(String[] args) {
-        System.out.println("Hello world!");}
-
-
-    int[] arr = generateRandomArray();
+        int[] monthArray = generateRandomArray();
+        int sum = 0;
+        for (int spendPerDay : monthArray) {
+            sum += spendPerDay;
+        }
+            System.out.printf("Сумма трат за месяц составила %s рублей", sum);
+        System.out.println();
+        int min = monthArray[0];
+        int max = monthArray[0];
+        for (int i = 1; i < monthArray.length; i++) {
+            if(min > monthArray[i]){
+                min = monthArray[i];
+            }else if(max < monthArray[i]){
+                max = monthArray[i];
+            }
+        }
+        System.out.printf("Минимальная сумма трат за день составила %s рублей. Максимальная сумма трат за день составилa %s рублей", min, max);
+    }
 
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
